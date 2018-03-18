@@ -2,48 +2,47 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
-
 class App extends Component {
-
   state = {
-    toggle: true
-    }
+    input: 'Hello'
+  }
 
-    toggle = () => {
+  updateInput = (event) => {
     this.setState({
-      // switches to the opposite
-      toggle: !this.state.toggle
-    })    
-    }
+      input: event.target.value.trim()
+    })
+  }
+
+  submit = () => {
+    console.log(this.text.value)
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Welcome text = "Welcome to learning props"/> 
+          <Welcome text="Welcome to Using Props" />
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        {this.state.toggle &&
-          <p>This should show and hide</p>
-        }
-        <button onClick={this.toggle}>Show / Hide</button>
+        <h3>{this.state.input}</h3>
+        <input type="text" onChange={this.updateInput} value={this.state.input}  />
+        <input type="text" ref={(input) => this.text = input } />
+        <button onClick={this.submit}>Show Value</button>
       </div>
     );
   }
 }
 
 class Welcome extends Component {
-  // the const is to avoid having to write out in full
-  render(){
+  render() {
     const { text } = this.props;
     return (
       <h1 className="App-title">{text}</h1>
-            )
-          }
+    )
+  }
 }
 
 
