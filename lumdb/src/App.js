@@ -24,7 +24,7 @@ class App extends Component {
         </header>
         {movies.map((movie)=>{
           return(
-            <div>
+            <div key={movie.id}>
               {movie.title}
             </div>
           )
