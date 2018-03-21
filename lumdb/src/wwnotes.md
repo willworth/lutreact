@@ -57,3 +57,11 @@ willcompupdate?
 you can leave it as is or put it through a loop of rerender with a trim or whatever you want...
 
 
+=========================
+
+yarn add prop-types
+
+=======================
+cannot set defaul props on a nested property.
+
+should always have .isrequired or a default prop
