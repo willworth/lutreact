@@ -65,3 +65,8 @@ yarn add prop-types
 cannot set defaul props on a nested property.
 
 should always have .isrequired or a default prop
+-----------
+select in dev tools then in console $r will show the entire component
+
+
+npm install --save-dev eslint eslint-config-airbnb eslint-plugin-react
