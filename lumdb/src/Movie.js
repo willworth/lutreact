@@ -6,18 +6,14 @@ export default class Movie extends Component {
         movie: PropTypes.shape({
             title: PropTypes.string.isRequired,
         }),
-        desc: PropTypes.string
     }
 // CANNOT HAVE NESTED DEFAULT PROPS!!!!!!!!!
-    static defaultProps = {
-        desc: 'Description not available'
-    }
+ 
 
     render() {
         return(
             <div>
            <h3>{this.props.movie.title}</h3>
-           <p>{this.props.desc}</p>
             </div>
         )
     }
