@@ -6,7 +6,7 @@ import Movie from './Movie'
 
 class App extends Component {
 
-  state = {
+  state ={
     movies:[]
   }
 
