@@ -10,6 +10,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Movieslist from './MoviesList';
+import MovieDetail from './MovieDetail';
 
 const App = () => (
   <Router>
@@ -21,7 +22,7 @@ const App = () => (
       </header>
       <Switch>
         <Route exact path="/" component={Movieslist} />
-        <Route path="/test" component={Test} />
+        <Route path="/:id" component={MovieDetail} />
       </Switch>
     </div>
   </Router>
@@ -30,7 +31,3 @@ const App = () => (
 
 export default App;
 
-
-const Test = () => (
-  <h1>Test</h1>
-);
