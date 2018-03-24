@@ -70,3 +70,12 @@ select in dev tools then in console $r will show the entire component
 
 
 npm install --save-dev eslint eslint-config-airbnb eslint-plugin-react
+
+------------------------
+
+react-router-dom
+is the client side specific version
+
+wrap the main app in it and it adds loads of useful stuff like history...
+
+Only one router per app and should go at the root

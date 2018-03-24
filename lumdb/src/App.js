@@ -1,5 +1,9 @@
 /* eslint react/no-did-mount-set-state: 0 */
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,20 +22,29 @@ class App extends Component {
         movies: movies.results,
       });
     } catch (e) {
+      // eslint-disable-next-line
       console.log(e);
     }
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <Router>
+        <div className="App">
+          <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        {this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)}
-      </div>
+          <Route path="/test" component={Test} />
+          {this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)}
+        </div>
+      </Router>
     );
   }
 }
 
 export default App;
+
+
+const Test = () => (
+  <h1>Test</h1>
+);
