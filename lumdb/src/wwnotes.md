@@ -85,3 +85,6 @@ ORDER MATTERS
 ===========
 
 in movie js we have an example of exporting a css styled component which is then available in moviedetail
+''''''''''''
+pureComponent won´t do deep checking.  if you use it you can get performance gains, but be careful
+can use shouldcomponentupdate for custom checking of props
